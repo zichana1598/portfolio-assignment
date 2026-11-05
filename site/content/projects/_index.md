@@ -12,6 +12,7 @@ showTableOfContents: false
 
 {{< project-card
   title="전북대학교 공지 모니터링 시스템"
+  headingLevel="h2"
   tech="Python · Web Crawling · Automation"
   url="projects/notice-monitor"
 >}}

@@ -1,14 +1,18 @@
 {{ $title := .Get "title" }}
 {{ $tech := .Get "tech" }}
 {{ $url := relref .Page (.Get "url") }}
+{{ $headingLevel := .Get "headingLevel" | default "h3" }}
+{{ if not (in (slice "h2" "h3" "h4" "h5" "h6") $headingLevel) }}
+  {{ $headingLevel = "h3" }}
+{{ end }}
 
 <a href="{{ $url | safeURL }}"
    class="not-prose group block rounded-lg border border-neutral-300 bg-white/60 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl hover:shadow-primary-500/10 dark:border-neutral-600 dark:bg-neutral-900/50 dark:hover:border-primary-700">
 
   <article>
-    <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-100">
+    {{ printf `<%s class="text-xl font-bold text-neutral-800 dark:text-neutral-100">` $headingLevel | safeHTML }}
       {{ $title }}
-    </h3>
+    {{ printf `</%s>` $headingLevel | safeHTML }}
 
     <p class="mt-2 text-sm font-medium text-primary-600 dark:text-primary-400">
       {{ $tech }}
