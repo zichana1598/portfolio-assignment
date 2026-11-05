@@ -4,6 +4,11 @@ description: "대학 공지사항 수집 및 맞춤형 알림 자동화 프로�
 date: 2026-09-15
 showDate: false
 showReadingTime: false
+showWordCount: false
+showAuthor: false
+showViews: false
+showLikes: false
+showEdit: false
 ---
 
 ## Overview
