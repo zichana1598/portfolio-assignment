@@ -1,5 +1,5 @@
 ---
-title: "소개"
+title: "About Me"
 description: "자기소개 및 관심 분야"
 ---
 
