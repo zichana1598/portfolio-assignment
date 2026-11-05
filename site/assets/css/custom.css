@@ -206,3 +206,14 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Keep the scroll control visible while a keyboard user is interacting with it. */
+#scroll-to-top:focus-within {
+  opacity: 1;
+  translate: 0 0;
+}
+
+#scroll-to-top a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
