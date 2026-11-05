@@ -28,13 +28,39 @@ Backend Development · Web Services
 
 ## Tech Stack
 
-| 분야 | 기술 | 활용 경험 |
-|---|---|---|
-| Language | Python | 대학 공지 수집 프로그램 개발 |
-| Language | Java | 객체지향 프로그래밍 실습 |
-| Language | C / C++ | 자료구조 및 알고리즘 학습 |
-| Tools | Git / GitHub | 프로젝트 버전 관리 |
-| Environment | Linux | 개발 환경 구성 |
+{{< tech-grid >}}
+
+{{< tech-feature
+  icon="code"
+  title="Languages"
+  headingLevel="h3"
+>}}
+**Python** — 대학 공지 수집 프로그램 개발
+
+**Java** — 객체지향 프로그래밍 실습
+
+**C / C++** — 자료구조 및 알고리즘 학습
+{{< /tech-feature >}}
+
+{{< tech-feature
+  icon="github"
+  title="Tools"
+  headingLevel="h3"
+>}}
+**Git / GitHub** — 프로젝트 버전 관리
+{{< /tech-feature >}}
+
+{{< tech-feature
+  icon="cloud"
+  title="Environment"
+  headingLevel="h3"
+>}}
+**Ubuntu 24.04 LTS**
+
+Linux 개발 환경 구성 및 활용
+{{< /tech-feature >}}
+
+{{< /tech-grid >}}
 
 ## Learning Goals
 
