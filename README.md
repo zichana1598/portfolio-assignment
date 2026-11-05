@@ -92,6 +92,26 @@ CI는 Hugo Extended 0.167.0을 사용하며, Pages 주소에 맞게 경로를 �
 루트 `public/`에 생성해 배포합니다. 로컬 빌드의 `site/public/`과는 출력 위치가 다릅니다.
 배포에 필요한 Python, Node.js, Go, Sass는 워크플로에서 설치합니다.
 
+## 파비콘
+
+`site/static/favicon.svg`가 원본이며, 남색 배경에 파란 `</>` 심볼을 사용합니다.
+AI의 도움을 받아 SVG로 제작하고 librsvg와 Pillow로 PNG·ICO를 생성했습니다.
+
+| 파일 (`site/static/`) | 크기·용도 |
+|---|---|
+| `favicon-16x16.png`, `favicon-32x32.png` | 브라우저 탭 |
+| `favicon.ico` | 16·32·48px 호환 아이콘 |
+| `apple-touch-icon.png` | 180×180px, Apple 홈 화면 |
+| `android-chrome-192x192.png`, `android-chrome-512x512.png` | 192·512px, manifest 아이콘 |
+| `site.webmanifest` | 사이트 이름·색상·상대 아이콘 경로 |
+
+아이콘을 바꾸면 SVG뿐 아니라 PNG·ICO도 함께 갱신합니다.
+`site/layouts/partials/favicons.html`은 32px PNG의 해시를 URL에 붙여 캐시를 갱신합니다.
+다른 크기만 교체하면 이 해시는 바뀌지 않으므로 전체 아이콘을 함께 관리합니다.
+
+로컬에서는 `/favicon-32x32.png`, 배포 후에는
+`/portfolio-assignment/favicon-32x32.png`와 브라우저 탭을 확인합니다.
+
 ## 출처 및 라이선스
 
 - 정적 사이트 생성기: [Hugo](https://gohugo.io/)
