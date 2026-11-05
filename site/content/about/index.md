@@ -1,6 +1,13 @@
 ---
 title: "About Me"
 description: "자기소개 및 관심 분야"
+showDate: false
+showReadingTime: false
+showWordCount: false
+showAuthor: false
+showViews: false
+showLikes: false
+showEdit: false
 ---
 
 **여경용**
