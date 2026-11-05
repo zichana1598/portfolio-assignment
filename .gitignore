@@ -46,6 +46,7 @@ ga-pageviews.csv
 # Prepared Hugo Pages site
 !/site/
 !/site/**
+/site/public/
 !/.github/
 !/.github/**
 !/.github-pages.json
