@@ -16,7 +16,7 @@ enableStructuredBreadcrumbs = true
 
 replyByEmail = false
 
-mainSections = ["docs"]
+mainSections = []
 # robots = ""
 
 disableImageOptimization = false
@@ -53,12 +53,11 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 
 [homepage]
   layout = "landing" # valid options: page, profile, hero, card, background, landing, custom
-  layoutSwitcher = true # opt-in interactive preview of the built-in layouts
+  layoutSwitcher = false # opt-in interactive preview of the built-in layouts
   # homepageImage = "/img/iceland.jpg" # used in: hero, and card
-  showRecent = true
+  showRecent = false
   showRecentItems = 12
-  showMoreLink = true
-  showMoreLinkDest = "docs"
+  showMoreLink = false
   cardView = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = true # only used when layout equals background
@@ -78,8 +77,7 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = true
   showDraftLabel = true
-  showEdit = true
-  editURL = "https://github.com/nunocoracao/blowfish/tree/main/exampleSite/content"
+  showEdit = false
   editAppendPath = true
   seriesOpened = false
   showHeadingAnchors = true
@@ -138,15 +136,6 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
   cardView = true
   cardViewScreenWidth = false
 
-[firebase]
-  apiKey = "AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
-  authDomain = "blowfish-21fff.firebaseapp.com"
-  projectId = "blowfish-21fff"
-  storageBucket = "blowfish-21fff.appspot.com"
-  messagingSenderId = "60108104191"
-  appId = "1:60108104191:web:039842ebe1370698b487ca"
-  measurementId = "G-PEDMYR1V0K"
-
 [fathomAnalytics]
   # site = "ABC12345"
   # domain = "llama.yoursite.com"
@@ -161,13 +150,6 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 [selineAnalytics]
   # token = "XXXXXX"
   # enableTrackEvent = false
-
-[buymeacoffee]
-  identifier = "nunocoracao"
-  globalWidget = true
-  globalWidgetMessage = ""
-  globalWidgetColor = "#FFDD00"
-  globalWidgetPosition = "right"
 
 [kofi]
   # identifier = ""
