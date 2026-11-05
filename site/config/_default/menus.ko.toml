@@ -6,7 +6,12 @@
   weight = 10
 
 [[main]]
+  name = "소개"
+  pageRef = "about"
+  weight = 20
+
+[[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/zichana1598"
-  weight = 20
+  weight = 30
