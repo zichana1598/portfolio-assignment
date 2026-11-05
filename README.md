@@ -51,26 +51,50 @@ hugo --config pages.json --environment production --minify --enableGitInfo=false
 ```text
 .
 ├── .github/
-│   ├── workflows/hugo-pages.yml  # 자동 배포
-│   └── pages_build.py           # 배포 빌드 및 경로 보정
+│   ├── workflows/hugo-pages.yml       # 자동 배포
+│   └── pages_build.py                # 배포 빌드 및 경로 보정
 ├── site/
-│   ├── config/_default/        # 사이트 설정과 메뉴
+│   ├── config/_default/              # Hugo·언어·메뉴·화면 설정
 │   ├── content/
-│   │   ├── _index.md           # Home
-│   │   ├── about/              # About Me
-│   │   └── projects/           # 프로젝트 목록과 상세 페이지
-│   ├── assets/                 # 이미지 등 정적 자산
-│   ├── layouts/                # 사이트 전용 템플릿
-│   ├── pages.json              # 배포 주소와 테마 설정
-│   └── themes/template/        # Blowfish 테마
-├── .github-pages.json           # 배포 스크립트 설정
+│   │   ├── _index.md                 # Home
+│   │   ├── about/index.md            # About Me
+│   │   └── projects/
+│   │       ├── _index.md             # 프로젝트 목록
+│   │       └── notice-monitor/index.md
+│   ├── assets/
+│   │   ├── css/custom.css            # Overview·흐름도·Contact 스타일
+│   │   └── img/                      # 소셜 공유 이미지
+│   ├── static/                       # 파비콘·manifest
+│   ├── i18n/ko.yaml                  # 메뉴 접근성 한국어 번역
+│   ├── layouts/
+│   │   ├── index.html                # 홈페이지 구성
+│   │   ├── _default/                 # 목록·제목 렌더링 재정의
+│   │   ├── partials/                 # 홈페이지 본문·Footer·파비콘
+│   │   └── shortcodes/               # 프로젝트·기술 스택 카드 등
+│   ├── pages.json                    # 배포 주소와 테마 설정
+│   ├── go.mod                        # 로컬 테마 모듈 연결
+│   └── themes/template/              # Blowfish 테마 원본
+├── .github-pages.json                # 배포 스크립트 설정
+├── prepare_github_pages.py           # 최초 배포 구조 준비
 ├── README.md
 └── LICENSE
 ```
 
-페이지 내용은 `site/content/`, 메뉴는 `site/config/_default/menus.ko.toml`,
-프로필은 `languages.ko.toml`, 화면 옵션은 `params.toml`에서 수정합니다.
+| 수정 대상 | 위치 |
+|---|---|
+| 페이지 본문 | `site/content/` |
+| 메뉴 | `site/config/_default/menus.ko.toml` |
+| 사이트 제목·프로필 | `site/config/_default/languages.ko.toml` |
+| 화면 옵션·Contact 연락처 | `site/config/_default/params.toml` (`[contact]`) |
+| 프로젝트 카드 | `site/layouts/shortcodes/project-card.html` (`headingLevel`로 제목 수준 지정) |
+| 기술 스택 카드 | `site/layouts/shortcodes/tech-grid.html`, `tech-feature.html` |
+| Footer 구성 | `site/layouts/partials/footer.html` |
+| 표·흐름도·Contact 스타일 | `site/assets/css/custom.css` |
+| 제목 앵커의 Tab 제외 | `site/layouts/_default/_markup/render-heading.html` |
+| 메뉴의 접근 가능한 이름 | `site/i18n/ko.yaml` |
+
 테마 템플릿을 변경할 때는 원본 대신 `site/layouts/`의 같은 경로에 파일을 두어 재정의합니다.
+`site/public/`과 루트 `public/`은 생성 결과물이므로 직접 수정하지 않습니다.
 
 ## 배포
 
