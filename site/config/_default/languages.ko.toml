@@ -12,7 +12,7 @@ title = "여경용 | Portfolio"
 
 [params.author]
   name = "여경용"
-  headline = "기획 좋아함 백엔드 공부 중"
+  headline = "서비스 기획에 관심이 있으며, 백엔드 개발을 공부하고 있습니다."
   links = [
     { github = "https://github.com/zichana1598" },
   ]
