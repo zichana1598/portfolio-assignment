@@ -58,9 +58,22 @@ Python은 HTTP 요청과 HTML 파싱을 위한 라이브러리를 활용하기 �
 
 현재 공지사항 수집과 데이터 변환 기능을 다음과 같은 구조로 구현했습니다.
 
-1. **HTTP Collector** — 대학 홈페이지에서 HTML 수집
-2. **CSAI Parser** — HTML에서 공지 정보 추출
-3. **Notice Model** — 추출한 정보를 공통 데이터 구조로 변환
+<ol class="project-flow not-prose" role="list" aria-label="공지 데이터 처리 순서">
+  <li class="project-flow__step">
+    <strong class="project-flow__title">HTTP Collector</strong>
+    <p>대학 홈페이지에서 HTML 수집</p>
+    <span class="project-flow__arrow" aria-hidden="true">→</span>
+  </li>
+  <li class="project-flow__step">
+    <strong class="project-flow__title">CSAI Parser</strong>
+    <p>HTML에서 공지 정보 추출</p>
+    <span class="project-flow__arrow" aria-hidden="true">→</span>
+  </li>
+  <li class="project-flow__step">
+    <strong class="project-flow__title">Notice Model</strong>
+    <p>추출한 정보를 공통 데이터 구조로 변환</p>
+  </li>
+</ol>
 
 네트워크 통신과 HTML 파싱의 책임을 분리하여,
 게시판 구조가 변경되거나 수집 대상을 확장할 때
