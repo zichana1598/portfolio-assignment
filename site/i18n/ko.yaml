@@ -1,0 +1,6 @@
+nav:
+  close_menu: "메뉴 닫기"
+  footer_menu: "하단 메뉴"
+  main_menu: "주 메뉴"
+  mobile_menu: "모바일 메뉴"
+  toggle_submenu: "하위 메뉴 전환"
