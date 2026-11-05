@@ -13,13 +13,17 @@ showEdit: false
 
 ## Overview
 
-| 항목 | 내용 |
-|---|---|
-| 개발 기간 | 2026.09 ~ 현재 |
-| 진행 상태 | 개발 중 |
-| 개발 형태 | 개인 프로젝트 |
-| 사용 기술 | Python, requests, BeautifulSoup, Git |
-| 담당 역할 | 기획, 설계 및 개발 |
+<div class="project-overview">
+  <table>
+    <tbody>
+      <tr><th scope="row">개발 기간</th><td>2026.09 ~ 현재</td></tr>
+      <tr><th scope="row">진행 상태</th><td>개발 중</td></tr>
+      <tr><th scope="row">개발 형태</th><td>개인 프로젝트</td></tr>
+      <tr><th scope="row">사용 기술</th><td>Python, requests, BeautifulSoup, Git</td></tr>
+      <tr><th scope="row">담당 역할</th><td>기획, 설계 및 개발</td></tr>
+    </tbody>
+  </table>
+</div>
 
 대학 홈페이지의 공지사항을 자동으로 수집하고, 사용자에게 필요한 정보를 선별해 전달하는 시스템을 개발하고 있습니다.
 
