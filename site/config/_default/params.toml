@@ -170,3 +170,10 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 
 [advertisement]
   # adsense = ""
+
+# Public footer contact details. Leave a field empty to hide it.
+[contact]
+  title = "Contact"
+  email = "duruddyd@gmail.com"
+  github = "https://github.com/zichana1598"
+  phone = "010-5245-7096"
