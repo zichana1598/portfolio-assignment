@@ -112,6 +112,32 @@ AI의 도움을 받아 SVG로 제작하고 librsvg와 Pillow로 PNG·ICO를 생�
 로컬에서는 `/favicon-32x32.png`, 배포 후에는
 `/portfolio-assignment/favicon-32x32.png`와 브라우저 탭을 확인합니다.
 
+## 소셜 공유 이미지
+
+링크 미리보기에 사용하는 기본 배너는 `site/assets/img/portfolio-social.png`입니다.
+1200×630px 크기로 파비콘과 같은 색상을 사용하며, 원본은 같은 폴더의
+`portfolio-social.svg`입니다. AI의 도움을 받아 SVG로 제작하고 librsvg로 PNG를 생성했습니다.
+
+기본 이미지 설정은 `site/config/_default/params.toml`에 있습니다.
+
+```toml
+defaultSocialImage = "img/portfolio-social.png"
+```
+
+문구나 디자인을 수정하면 SVG에서 PNG를 다시 생성합니다. 테마가 `resources.Get`으로
+이미지를 읽으므로 파일은 `static/`이 아닌 `assets/`에서 관리합니다.
+별도의 마운트 설정은 사용하지 않습니다.
+
+프로덕션 빌드 후 생성된 HTML의 `og:image`와 `twitter:image`를 확인합니다.
+현재 기본 이미지 URL은 다음과 같습니다.
+
+```text
+https://zichana1598.github.io/portfolio-assignment/img/portfolio-social.png
+```
+
+페이지 번들의 `featured`, `cover`, `thumbnail` 이미지가 있으면 테마가 기본 공유 이미지보다
+우선 사용할 수 있습니다. 공유 서비스의 이전 미리보기가 남아 있으면 해당 서비스의 캐시도 확인합니다.
+
 ## 출처 및 라이선스
 
 - 정적 사이트 생성기: [Hugo](https://gohugo.io/)
