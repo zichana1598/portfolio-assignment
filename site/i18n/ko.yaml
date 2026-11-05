@@ -4,3 +4,9 @@ nav:
   main_menu: "주 메뉴"
   mobile_menu: "모바일 메뉴"
   toggle_submenu: "하위 메뉴 전환"
+
+article:
+  zen_mode_toggle: "독서 모드 전환"
+  zen_mode_title:
+    enable: "독서 모드 켜기"
+    disable: "독서 모드 끄기"
