@@ -1,6 +1,10 @@
 ---
 title: "Projects"
 description: "개인 프로젝트 및 개발 활동"
+showDate: false
+showReadingTime: false
+showAuthor: false
+hideArticleList: true
 ---
 
 ## 개인 프로젝트
