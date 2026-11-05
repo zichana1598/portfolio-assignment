@@ -1,6 +1,7 @@
 ---
 title: "Home"
 description: "나의 개발 포트폴리오"
+showTitle: false
 ---
 
 # Portfolio
