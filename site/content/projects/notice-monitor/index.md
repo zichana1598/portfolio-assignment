@@ -27,7 +27,15 @@ showEdit: false
 
 대학 홈페이지의 공지사항을 자동으로 수집하고, 사용자에게 필요한 정보를 선별해 전달하는 시스템을 개발하고 있습니다.
 
-[GitHub Repository](https://github.com/zichana1598/jbnu-notice-monitor)
+{{< project-card
+  title="zichana1598 / jbnu-notice-monitor"
+  tech="Python · requests · BeautifulSoup"
+  url="https://github.com/zichana1598/jbnu-notice-monitor"
+  icon="github"
+  linkLabel="GitHub에서 소스 코드 보기"
+>}}
+공지사항 HTML 수집과 파싱, Notice 데이터 모델의 소스 코드를 확인할 수 있습니다.
+{{< /project-card >}}
 
 ## Background
 

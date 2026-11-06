@@ -1,6 +1,11 @@
 {{ $title := .Get "title" }}
 {{ $tech := .Get "tech" }}
-{{ $url := relref .Page (.Get "url") }}
+{{ $url := .Get "url" }}
+{{ $external := or (strings.HasPrefix $url "https://") (strings.HasPrefix $url "http://") }}
+{{ if not $external }}
+  {{ $url = relref .Page $url }}
+{{ end }}
+{{ $linkLabel := .Get "linkLabel" | default "프로젝트 자세히 보기" }}
 {{ $headingLevel := .Get "headingLevel" | default "h3" }}
 {{ if not (in (slice "h2" "h3" "h4" "h5" "h6") $headingLevel) }}
   {{ $headingLevel = "h3" }}
@@ -11,6 +16,9 @@
 
   <article>
     {{ printf `<%s class="text-xl font-bold text-neutral-800 dark:text-neutral-100">` $headingLevel | safeHTML }}
+      {{ with .Get "icon" }}
+        <span class="inline-block align-text-bottom me-2" aria-hidden="true">{{ partial "icon.html" . }}</span>
+      {{ end }}
       {{ $title }}
     {{ printf `</%s>` $headingLevel | safeHTML }}
 
@@ -23,7 +31,7 @@
     </div>
 
     <p class="mt-5 text-sm font-semibold text-primary-600 dark:text-primary-400">
-      프로젝트 자세히 보기 <span aria-hidden="true">→</span>
+      {{ $linkLabel }} <span aria-hidden="true">{{ if $external }}↗{{ else }}→{{ end }}</span>
     </p>
   </article>
 
